@@ -21,8 +21,18 @@ To start the application, navigate to the `organism` directory and run `app.py`:
 
 ```bash
 cd ./organism/
+## Running the Application
 python ./app.py
+
+# After starting the application using the previous steps, you should see output similar to:
+# Running on all addresses (0.0.0.0)
+# Running on http://127.0.0.1:5000
+# Running on http://202.113.53.212:5000
+# You can choose any of the above URLs and paste it into your web browser to access the RMPP Prediction Tool.
+
 ```
+
+
 
 ## Clinical Variables
 
