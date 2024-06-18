@@ -6,6 +6,8 @@ This README provides an overview of the RMPP (Refractory Mycoplasma Pneumoniae P
 
 The RMPP Prediction Tool is a web-based application designed to predict the probability of a patient developing Refractory Mycoplasma Pneumoniae Pneumonia (RMPP). The tool takes into account various clinical variables and uses a machine learning model to provide a probabilistic prediction. This tool is intended to aid clinicians in making informed decisions about patient care.
 
+![image text](https://github.com/yuhan-coder/RMPP/blob/main/IMG.png)
+
 ## Prerequisites
 
 Before running the RMPP Prediction Tool, ensure that you have the following installed on your system:
@@ -17,10 +19,10 @@ Clone the repository to your local machine.
 
 ## Running the Application
 
-To start the application, navigate to the `organism` directory and run `app.py`:
+To start the application, navigate to the `RMPP-main` directory and run `app.py`:
 
 ```bash
-cd ./organism/
+cd ./RMPP-main/
 ## Running the Application
 python ./app.py
 
@@ -64,5 +66,4 @@ The tool requires the following input variables:
 1. Review the predicted probability.
 2. Examine the SHAP values visualization to understand the contribution of each feature to the prediction.
 
-![image text](https://github.com/yuhan-coder/RMPP/blob/main/IMG.png)
 
