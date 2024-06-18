@@ -8,6 +8,8 @@ The RMPP Prediction Tool is a web-based application designed to predict the prob
 
 
 ![image text](https://github.com/yuhan-coder/RMPP/blob/main/IMG.png)
+
+
 ## Prerequisites
 
 Before running the RMPP Prediction Tool, ensure that you have the following installed on your system:
