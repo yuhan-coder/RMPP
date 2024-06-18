@@ -1,10 +1,10 @@
 # README for the RMPP Prediction Tool
 
-This README provides an overview of the refractory mycoplasma pneumoniae pneumonia(RMPP) Prediction Tool, its purpose, and how to use it effectively.
+This README provides an overview of the refractory mycoplasma pneumoniae pneumonia(RMPP) prediction tool, its purpose, and how to use it effectively.
 
 ## Overview
 
-The RMPP Prediction Tool is a web-based application designed to predict the probability of a patient developing Refractory Mycoplasma Pneumoniae Pneumonia (RMPP). The tool takes into account various clinical variables and uses a machine learning model to provide a probabilistic prediction. This tool is intended to aid clinicians in making informed decisions about patient care.
+The RMPP Prediction Tool is a web-based application designed to predict the probability of a patient developing RMPP. The tool takes into account various clinical variables and uses a machine learning model to provide a probabilistic prediction. This tool is intended to aid clinicians in making informed decisions about patient care.
 
 ---
 ![image text](https://github.com/yuhan-coder/RMPP/blob/main/static/IMG.png)
