@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        label{
+            margin: 5px 0 5px 0;
+        }
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .left{
+            display: flex;
+            flex: 41%;
+        }
+        .right{
+            flex: 59%;
+            display: flex;
+        }
+        img{
+            width: 1320px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Tool for Predicting Refractory Mycoplasma Pneumoniae Pneumonia</h1>
+    <h2 style="text-align: center;">Please enter values for each variable below</h2>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <label for="Duration">Duration of Fever days</label>
+                    <input type="number" class="form-control" id="Duration" placeholder="input Duration of Fever days" required>
+                 </div>       
+                 <div class="col-md-6 col-lg-6 col-xl-6">
+                            <label for="Macrolide">Macrolide Treatment</label>
+                            <select class="form-select" id="Macrolide" aria-label="Default select example" required>
+                                <option value="1" selected>yes</option>
+                                <option value="0">no</option>
+                              </select>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                            <label for="SMPP">SMPP</label>
+                            <select class="form-select" id="SMPP" aria-label="Default select example" required>
+                                <option value="1" selected>yes</option>
+                                <option value="0">no</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                            <label for="LDH">LDH</label>
+                            <input type="number" class="form-control required" id="LDH" placeholder="input LDH" >
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                            <label for="NLR">NLR</label>
+                            <input type="number" class="form-control required" id="NLR" placeholder="input NLR" >
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                            <label for="ALT">ALT</label>
+                            <input type="number" class="form-control" id="ALT" placeholder="input ALT" required>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-6">
+                            <label for="Peak">Peak Fever</label>
+                            <input type="number" class="form-control" id="Peak" placeholder="input Peak Fever" required>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6" style="margin-bottom: 20px;">
+                            <label for="Extensive">Extensive Lung Consolidation</label>
+                            <select class="form-select" id="Extensive" required>
+                                <option value="1" selected>yes</option>
+                                <option value="0">no</option>
+                              </select>
+                            </div>
+                        <br>
+                        <!-- 注意下面的type必须是button，使用submit会出现闪现效果 -->
+                        <button type="button" class="btn btn-primary" id="predict" style="width: 100px;">Predict</button>
+                    
+                </div>
+                
+            </div>
+    </div>
+</div>
+
+    <div id="conc" style="display:flex;flex-direction:column; justify-content: center;align-items: center;margin-top: 20px;">
+        
+</div>
+</div>
+<script>
+    $("#predict").click(function(){
+        if($("#Duration").val().trim().length==0){
+            swal("Please enter a value!", "Duration of Fever days cannot be empty", "error");
+            return false
+        }
+        if($("#LDH").val().trim().length==0){
+            swal("Please enter a value!", "LDH cannot be empty", "error");
+            return false
+        }
+        if($("#NLR").val().trim().length==0){
+            swal("Please enter a value!", "NLR cannot be empty", "error");
+            return false
+        }
+        if($("#ALT").val().trim().length==0){
+            swal("Please enter a value!", "ALT cannot be empty", "error");
+            return false
+        }
+        if($("#Peak").val().trim().length==0){
+            swal("Please enter a value!", "Peak Fever cannot be empty", "error");
+            return false
+        }
+
+        $.ajax({
+              url: "/api",
+               dataType: "text",
+               type: "post",
+               data: {
+                   'Duration':$('#Duration').val(),
+                   'Macrolide':$('#Macrolide').val(),
+                   'SMPP':$('#SMPP').val(),
+                   'LDH':$('#LDH').val(),
+                   'NLR':$('#NLR').val(),
+                   'ALT':$('#ALT').val(),
+                   'Peak':$('#Peak').val(),
+                   'Extensive':$('#Extensive').val()
+              },
+              success:function(res){
+                console.log(res)
+                $('#Duration').val('')
+                $('#LDH').val('')
+                $('#NLR').val('')
+                $('#ALT').val('')
+                $('#Peak').val('')
+                  $("#conc").html("")
+                  var main=`
+                  <span>Based on feature values, the predicted probability of RMPP is ${JSON.parse(res).SMPP}%</span>
+                  <br>
+            <img src="/static/1.png?rand=${JSON.parse(res).rand}">`
+                  $("#conc").append(main)
+              },
+              error:function(err){
+                  $("#conc").html("")
+                  console.log('报错')
+                  console.log(err)
+              }
+    })
+    })
+</script>
+</body>
+</html>
