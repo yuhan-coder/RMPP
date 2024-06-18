@@ -30,8 +30,8 @@ python ./app.py
 
 # After starting the application using the previous steps, you should see output similar to:
 # Running on all addresses (0.0.0.0)
-# Running on http://127.0.0.1:5000
-# Running on http://202.113.53.212:5000
+# Running on http://xxx.0.0.1:5000 your port
+# Running on http://xxx.xxx.53.212:5000 your port
 # You can choose any of the above URLs and paste it into your web browser to access the RMPP Prediction Tool.
 
 ```
@@ -45,10 +45,10 @@ The tool requires the following input variables:
 - **Duration of Fever (days)**: Number of days the patient has had a fever.
 - **SMPP**: Whether the patient has Severe Mycoplasma Pneumoniae Pneumonia (Yes=1/No=0).
 - **NLR**: Neutrophil-to-Lymphocyte Ratio.
-- **Peak Fever**: Highest recorded body temperature during the fever.
+- **Peak Fever**: Highest recorded body temperature during the fever (℃).
 - **Macrolide Treatment**: Whether the patient has received macrolide treatment (Yes=1/No=0).
-- **LDH**: Lactate Dehydrogenase levels.
-- **ALT**: Alanine Aminotransferase levels.
+- **LDH**: Lactate Dehydrogenase levels (U/L).
+- **ALT**: Alanine Aminotransferase levels (U/L).
 - **Extensive Lung Consolidation**: Presence of extensive lung consolidation (Yes=1/No=0).
 
 ## How to Use
