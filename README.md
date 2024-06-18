@@ -1,6 +1,6 @@
 # README for the RMPP Prediction Tool
 
-This README provides an overview of the RMPP (Refractory Mycoplasma Pneumoniae Pneumonia) Prediction Tool, its purpose, and how to use it effectively.
+This README provides an overview of the refractory mycoplasma pneumoniae pneumonia(RMPP) Prediction Tool, its purpose, and how to use it effectively.
 
 ## Overview
 
