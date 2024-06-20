@@ -6,6 +6,8 @@ This README provides an overview of the refractory mycoplasma pneumoniae pneumon
 
 The RMPP Prediction Tool is a web-based application designed to predict the probability of a patient developing RMPP. The tool takes into account various clinical variables and uses a machine learning model to provide a probabilistic prediction. This tool is intended to aid clinicians in making informed decisions about patient care.
 
+When the actual values of the 8 required features are input into the model, this application will automatically predict the risk of RMPP for an individual child. Additionally, it will display a SHAP force plot for the child, indicating the features contributing to the RMPP decision: the blue features on the right push the prediction towards non-RMPP, while the red features on the left push the prediction towards RMPP.
+
 ---
 ![image text](https://github.com/yuhan-coder/RMPP/blob/main/static/IMG.png)
 
@@ -35,7 +37,7 @@ python ./app.py
 # You can choose any of the above URLs and paste it into your web browser to access the RMPP Prediction Tool.
 
 ```
-
+Once you open the URL, you can run this app multiple times to guide your predictions on the risk of RMPP for the child.
 
 
 ## Clinical Variables
