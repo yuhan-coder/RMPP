@@ -9,7 +9,7 @@ The RMPP Prediction Tool is a web-based application designed to predict the prob
 When the actual values of the 8 required features are input into the model, this application will automatically predict the risk of RMPP for an individual child. Additionally, it will display a SHAP force plot for the child, indicating the features contributing to the RMPP decision: the blue features on the right push the prediction towards non-RMPP, while the red features on the left push the prediction towards RMPP.
 
 ---
-![image text](https://github.com/yuhan-coder/RMPP/blob/main/static/IMG.png)
+![image text](https://github.com/yuhan-coder/RMPP/blob/main/static/IMG1.png)
 
 
 ## Prerequisites
