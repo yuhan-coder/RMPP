@@ -70,4 +70,5 @@ The tool requires the following input variables:
 1. Review the predicted probability.
 2. Examine the SHAP values visualization to understand the contribution of each feature to the prediction.
 
-
+### Explanation:
+**Reference**: *Predicting and Interpreting Key Features of Refractory Mycoplasma Pneumoniae Pneumonia using Multiple Machine Learning Methods: A Chinese Retrospective Study*. Yuhan Jiang et al. [DOI:](https://doi.org/xxxx)
