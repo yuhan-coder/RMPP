@@ -72,7 +72,7 @@ The tool requires the following input variables:
 
 ## Citation  
 If you use this data, please cite:  
-> **Predicting and Interpreting Key Features of Refractory Mycoplasma Pneumoniae Pneumonia using Multiple Machine Learning Methods: A Chinese Retrospective Study** . Yuhan Jiang et al. [DOI:](https://doi.org/xxxx)
+> **Predicting and interpreting key features of refractory Mycoplasma pneumoniae pneumonia using multiple machine learning methods.** Sci Rep 15, 18029 (2025). https://doi.org/10.1038/s41598-025-02962-4
 
 ## Contact  
 For questions or collaborations, please contact:  
